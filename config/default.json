@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://localhost:27017/",
+    "jwtSecret": "REDACTED_JWT_SECRET"
+}

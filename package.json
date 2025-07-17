@@ -1,0 +1,30 @@
+{
+  "name": "mern_shopping_list",
+  "version": "1.0.0",
+  "description": "shopping list built with the MERN stack",
+  "license": "MIT",
+  "author": "Diwakar Rawat",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "concurrently": "^9.1.2",
+    "config": "^4.0.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.2",
+    "react-scripts": "^5.0.1",
+    "reactstrap": "^9.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
