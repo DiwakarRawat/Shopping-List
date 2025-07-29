@@ -25,6 +25,31 @@ router.post('/', auth, (req, res) => {
     newItem.save().then(item => res.json(item));
 });
 
+// @route   PUT api/items/:id
+// @desc    Update An Item (e.g., toggle completed status)
+// @access  Private 
+router.put('/:id', auth, (req, res) => {
+    const { name, completed } = req.body; // Destructure properties you want to allow updating
+
+    // Build update object
+    const updateFields = {};
+    if (name !== undefined) updateFields.name = name;
+    if (completed !== undefined) updateFields.completed = completed;
+
+    Item.findByIdAndUpdate(
+        req.params.id,
+        { $set: updateFields }, // Use $set to update specific fields
+        { new: true } // Return the updated document
+    )
+    .then(item => {
+        if (!item) {
+            return res.status(404).json({ msg: 'Item not found' });
+        }
+        res.json(item);
+    })
+    .catch(err => res.status(400).json({ msg: 'Failed to update item', error: err }));
+});
+
 // @route DELETE api/items/:id
 // @desc DELETE An Item
 // @access Private

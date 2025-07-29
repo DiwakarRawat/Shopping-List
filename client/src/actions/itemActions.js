@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types';
+import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING, UPDATE_ITEM } from './types';
 import { tokenconfig } from './authActions';
 import { returnErrors } from './errorActions';
 
@@ -50,4 +50,18 @@ export const setItemLoading = () => {
     return {
         type: ITEMS_LOADING
     }
-}
+};
+
+export const updateItem = (id, updatedFields) => (dispatch, getState) => { // <-- Added 'export const'
+    axios
+        .put(`/api/items/${id}`, updatedFields, tokenconfig(getState))
+        .then(res =>
+            dispatch({
+                type: UPDATE_ITEM,
+                payload: res.data
+            })
+        )
+        .catch(err =>
+            dispatch(returnErrors(err.response.data, err.response.status))
+        );
+};

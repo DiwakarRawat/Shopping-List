@@ -19,3 +19,361 @@
   opacity: 0.01;
   transition: opacity 100ms ease-in;
 }
+
+
+
+
+/* App.css (or a new file like ShoppingList.css) */
+
+/* General Body Styling for a nicer background */
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Container Spacing */
+.container {
+  margin-top: 2rem; /* Add some space above the main content */
+}
+
+/* Shopping List Group Styling */
+.list-group {
+  border-radius: 0.5rem; /* Slightly rounded corners for the list */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures rounded corners are visible with inner elements */
+}
+
+/* Individual List Item Styling */
+.list-group-item {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align content */
+  justify-content: space-between; /* Space out item name and button */
+  padding: 1rem 1.25rem; /* More comfortable padding */
+  border-color: #e9ecef; /* Lighter border color */
+  font-size: 1.1em; /* Slightly larger text */
+  background-color: #ffffff; /* White background for items */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0; /* Light hover effect */
+}
+
+/* Remove Button Specifics */
+.remove-btn {
+  opacity: 0.7; /* Make it slightly transparent when not hovered */
+  transition: opacity 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  margin-right: 10px; /* Space between button and text */
+}
+
+.remove-btn:hover {
+  opacity: 1; /* Fully opaque on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* CSSTransition for fade effect */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+/* ItemModal Button and Heading */
+.item-modal-button {
+  display: block; /* Make the button take full width in its container */
+  width: fit-content; /* Adjust width to content */
+  margin: 2rem auto 0; /* Center the button and add top margin */
+}
+
+.mb-3.ml-4 { /* Target the login message */
+  text-align: center;
+  margin-top: 2rem;
+  color: #6c757d; /* Muted color */
+}
+
+/* Style for the Add Item button inside the modal */
+.modal-body .btn-dark {
+  background-color: #28a745; /* A more prominent green for adding */
+  border-color: #28a745;
+}
+
+.modal-body .btn-dark:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* General button styling */
+.btn-dark {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-dark:hover {
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+
+/* General Body Styling for a nicer background */
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Container Spacing */
+.container {
+  margin-top: 2rem; /* Add some space above the main content */
+}
+
+/* Shopping List Group Styling */
+.list-group {
+  border-radius: 0.5rem; /* Slightly rounded corners for the list */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures rounded corners are visible with inner elements */
+}
+
+/* Individual List Item Styling */
+.list-group-item {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align content */
+  justify-content: space-between; /* Space out item name and button */
+  padding: 1rem 1.25rem; /* More comfortable padding */
+  border-color: #e9ecef; /* Lighter border color */
+  font-size: 1.1em; /* Slightly larger text */
+  background-color: #ffffff; /* White background for items */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0; /* Light hover effect */
+}
+
+/* Remove Button Specifics */
+.remove-btn {
+  opacity: 0.7; /* Make it slightly transparent when not hovered */
+  transition: opacity 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  margin-right: 10px; /* Space between button and text */
+}
+
+.remove-btn:hover {
+  opacity: 1; /* Fully opaque on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* CSSTransition for fade effect */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+/* ItemModal Button and Heading */
+.item-modal-button {
+  display: block; /* Make the button take full width in its container */
+  width: fit-content; /* Adjust width to content */
+  margin: 2rem auto 0; /* Center the button and add top margin */
+}
+
+.mb-3.ml-4 { /* Target the login message */
+  text-align: center;
+  margin-top: 2rem;
+  color: #6c757d; /* Muted color */
+}
+
+/* Style for the Add Item button inside the modal */
+.modal-body .btn-dark {
+  background-color: #28a745; /* A more prominent green for adding */
+  border-color: #28a745;
+}
+
+.modal-body .btn-dark:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* General button styling */
+.btn-dark {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-dark:hover {
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+
+/* Styling for completed items */
+.completed-item {
+  background-color: #f0fdf4; /* Very light green for completed items */
+  color: #6c757d; /* Muted text color */
+  text-decoration: line-through; /* Strikethrough effect */
+  opacity: 0.8;
+}
+
+.item-name {
+  margin-left: 0.75rem; /* Space between checkbox and text */
+}
+
+/* Style the checkbox */
+.item-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #28a745; /* Green accent color for the checkbox */
+}
+
+.welcome-message {
+  padding: 3rem 1rem;
+  background-color: var(--card-bg); /* Use your card background color */
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08); /* Match your list shadow */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 5rem auto; /* Center horizontally and add more vertical space */
+  color: var(--text-color);
+}
+
+.welcome-message h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary-color); /* Use your primary brand color */
+  font-size: 3rem; /* Larger heading */
+}
+
+.welcome-message p.lead {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.welcome-message p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+body {
+  background-color: var(--background-light);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+  /* --- NEW BACKGROUND IMAGE STYLES --- */
+  background-image: url('../public/images/SL image.jpg'); /* Path to your image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Keep image fixed when scrolling */
+  /* Add a semi-transparent overlay for better text readability */
+  /* This creates a darker/lighter layer on top of the image */
+  background-blend-mode: overlay; /* Blends the background-color with the image */
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+  /* If you want a light overlay, use a light color here and background-blend-mode: lighten/screen */
+}
+
+/* You might want to remove the body's previous background-color: var(--background-light);
+ if the image will cover everything. However, the overlay helps combine them. */
+
+/* To ensure your content has a nice background and isn't transparent over the image */
+.list-group,
+.welcome-message,
+.item-add-modal .modal-content { /* Add modal-content if you want modal to have its own solid background */
+  background-color: var(--card-bg); /* Use your white/off-white card background */
+  border-radius: 0.75rem; /* Match other rounded corners */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Slightly more prominent shadow for modals */
+  border: none; /* Remove default Bootstrap border */
+}
+
+.item-add-modal .modal-header {
+  background-color: var(--card-bg); /* Explicitly set to match modal content */
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-color); /* Ensure header text is readable */
+}
+
+.item-add-modal .modal-body {
+  background-color: var(--card-bg); /* Explicitly set to match modal content */
+  color: var(--text-color); /* Ensure body text is readable */
+}
+
+.item-add-modal .modal-title {
+  color: var(--text-color); /* Ensure title text is readable */
+}
+
+.item-add-modal .modal-body label {
+  color: var(--text-color); /* Ensure label text is readable */
+  font-weight: 500;
+}
+
+.item-add-modal .modal-body .form-control {
+  background-color: #f8f9fa; /* A very light gray for input background */
+  color: var(--text-color); /* Ensure input text is readable */
+  border: 1px solid var(--border-light);
+}
+
+.item-add-modal .modal-body .form-control::placeholder {
+  color: var(--text-muted); /* Muted color for placeholder text */
+}
+
+.item-add-modal .modal-body .btn-dark { /* Your "Add Item" button inside the modal */
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: #fff; /* Ensure button text is white */
+}
+.item-add-modal .modal-body .btn-dark:hover {
+  background-color: #1976D2 !important;
+  border-color: #1976D2 !important;
+}
+
+
+/* You may also need to adjust your Navbar background if it clashes */
+.navbar {
+  background-color: rgba(44, 62, 80, 0.8) !important; /* Make navbar slightly transparent */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Adjust text color for the login message if it becomes hard to read */
+.mb-3.ml-4 { /* Target the login message */
+  color: #f0f0f0; /* Lighter color if background is dark */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Add subtle text shadow for readability */
+}
+
+/* Adjust colors of headings in welcome message if needed */
+.welcome-message h1 {
+  color: #ffffff; /* White or light color for main heading */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.welcome-message p.lead,
+.welcome-message p {
+  color: #e0e0e0; /* Lighter muted color */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}

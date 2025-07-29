@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb://localhost:27017/",
+    "mongoURI": "mongodb+srv://diwakarrawat:database333@databases.qtcqgvd.mongodb.net/Shopping_List?retryWrites=true&w=majority&appName=Databases",
     "jwtSecret": "REDACTED_JWT_SECRET"
 }

@@ -10,6 +10,11 @@ const ItemSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    // NEW FIELD: Add a 'completed' field
+    completed: {
+        type: Boolean,
+        default: false // Items are not completed by default
     }
 });
 

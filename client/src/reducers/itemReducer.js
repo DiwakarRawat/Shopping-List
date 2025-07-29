@@ -1,5 +1,5 @@
 
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from '../actions/types';
+import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING, UPDATE_ITEM } from '../actions/types';
 
 
 const initialState = {
@@ -24,6 +24,13 @@ export default function itemReducer(state = initialState, action) {
             return {
                 ...state,
                 items: [action.payload, ...state.items]
+            };
+        case UPDATE_ITEM: // <-- New case for updating an item
+            return {
+                ...state,
+                items: state.items.map(item =>
+                    item._id === action.payload._id ? action.payload : item
+                )
             };
         case ITEMS_LOADING:
             return {

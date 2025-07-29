@@ -50,9 +50,9 @@ class ItemModal extends Component {
     render() {
         return(
             <div>
-                { this.props.isAuthenticted ? <Button
+                { this.props.isAuthenticated ? <Button
                     color="dark"
-                    style={{marginBottom: '2rem'}}
+                    className="item-modal-button"
                     onClick={this.toggle}
                     >Add Item
                     </Button>: <h4 className="mb-3 ml-4">Please login to manage items</h4> 
@@ -61,6 +61,7 @@ class ItemModal extends Component {
                 <Modal
                     isOpen={this.state.modal}
                     toggle={this.toggle}
+                    
                 >
                     <ModalHeader toggle={this.toggle}>Add to Shopping list</ModalHeader>
                     <ModalBody>
