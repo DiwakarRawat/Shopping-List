@@ -17,7 +17,7 @@ export const loadUser = () => (dispatch, getState) => {
     // User loading
     dispatch({ type: USER_LOADING });
 
-    axios.get('/api/auth/user', tokenconfig(getState))
+    axios.get('/api/auth/user', tokenConfig(getState))
         .then(res => dispatch({
             type: USER_LOADED,
             payload: res.data
@@ -87,7 +87,7 @@ export const logout = () => {
 };
 
 // Setup config/headers and tokens
-export const tokenconfig = getState => {
+export const tokenConfig = getState => {
     // Get token from localstorage
     const token = getState().auth.token;
 
