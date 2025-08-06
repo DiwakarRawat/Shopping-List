@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb://localhost/shopping-list-prod"
+}
