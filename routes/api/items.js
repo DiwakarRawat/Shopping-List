@@ -29,7 +29,7 @@ router.post('/', auth, (req, res) => {
 // @desc    Update An Item (e.g., toggle completed status)
 // @access  Private 
 router.put('/:id', auth, (req, res) => {
-    const { name, completed } = req.body; // Destructure properties you want to allow updating
+    const { name, completed } = req.body;
 
     // Build update object
     const updateFields = {};
@@ -38,8 +38,8 @@ router.put('/:id', auth, (req, res) => {
 
     Item.findByIdAndUpdate(
         req.params.id,
-        { $set: updateFields }, // Use $set to update specific fields
-        { new: true } // Return the updated document
+        { $set: updateFields },
+        { new: true }
     )
     .then(item => {
         if (!item) {
