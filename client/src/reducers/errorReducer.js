@@ -4,10 +4,10 @@ const initialState = {
     msg: {},
     status: null,
     id: null
-}
+};
 
-export default function(state = initialState, action) {
-    switch(action.type) {
+const errorReducer = (state = initialState, action) => {
+    switch (action.type) {
         case GET_ERRORS:
             return {
                 msg: action.payload.msg,
@@ -23,4 +23,6 @@ export default function(state = initialState, action) {
         default:
             return state;
     }
-}
+};
+
+export default errorReducer;

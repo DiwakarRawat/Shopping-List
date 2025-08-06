@@ -1,6 +1,6 @@
-import { 
-    USER_LOADING,
+import {
     USER_LOADED,
+    USER_LOADING,
     AUTH_ERROR,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
@@ -16,7 +16,7 @@ const initialState = {
     user: null
 };
 
-export default function(state = initialState, action) {
+const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case USER_LOADING:
             return {
@@ -32,12 +32,12 @@ export default function(state = initialState, action) {
             };
         case LOGIN_SUCCESS:
         case REGISTER_SUCCESS:
-        localStorage.setItem('token', action.payload.token);
+            localStorage.setItem('token', action.payload.token);
             return {
                 ...state,
                 ...action.payload,
                 isAuthenticated: true,
-                isLoading: false,
+                isLoading: false
             };
         case AUTH_ERROR:
         case LOGIN_FAIL:
@@ -54,4 +54,6 @@ export default function(state = initialState, action) {
         default:
             return state;
     }
-}
+};
+
+export default authReducer;
